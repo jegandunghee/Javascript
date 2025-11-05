@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>익명함수 사용해보기 </title>
+</head>
+<body>
+  <button >클릭!</button>
+
+  <script>
+    // 변수 : 전역변수, 지역변수 
+
+    let user_name = '정재희'; 
+    const elem = document.querySelector("button");
+    //버튼 클릭 시 "(@@)님 환영합니다" 팝업(alert)출력 
+    elem.onclick = () =>{
+      let user_name = "춘향이";
+      alert(`${user_name}님 환영합니다.`);
+    }
+    
+  </script>
+</body>
+</html>

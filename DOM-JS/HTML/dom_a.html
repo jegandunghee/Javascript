@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>a태그 속성 변경</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+
+    a{
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      font-size: 3rem;
+      font-weight: 800;
+      margin: 2rem;
+    }
+
+    div.btn_wrap{
+      padding: 2rem;
+      display: flex;
+      gap: 4rem;
+      *{
+        padding: 1rem 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#" target="_blank">사이트 이동</a>
+  <div class="btn_wrap">
+    <button>네이버</button>
+    <button>다음</button>
+    <button>구글</button>
+  </div>
+
+  <script src="../JS/dom_a.js"></script>
+</body>
+</html>

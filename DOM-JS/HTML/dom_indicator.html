@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이미지 인디케이터</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+
+    /* class 묶음 처리 영역 */
+    .show {
+      background-color: #555;
+    }
+
+    .line {
+      border: 5px solid rgb(216, 119, 119);
+    }
+
+    /*---------------------*/
+
+    main{
+      width: 300px;
+      margin: 3rem auto;
+
+      h1{
+        text-align: center;
+      }
+
+      img{
+        width: 100%;
+      }
+    }
+
+    ul{
+      margin: 1rem 0;
+      display: flex;
+      list-style: none;
+      justify-content: center;
+      gap: 1rem;
+      li{
+        width: 30px;
+        height: 30px;
+        background-color: #ddd;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>1번 이미지</h1>
+    <img src="../IMG/img-01.png" alt="이미지-1">
+    <ul>
+      <!-- <li onclick="showImg(1)"></li>
+      <li onclick="showImg(2)"></li>
+      <li onclick="showImg(3)"></li>
+      <li onclick="showImg(4)"></li>
+      <li onclick="showImg(5)"></li> -->
+      <li class="show line"></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </main>
+
+  <!-- <script src="../JS/dom_indicator.js"></script> -->
+  <script src="../JS/dom_indicator_2.js"></script>
+</body>
+</html>

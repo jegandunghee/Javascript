@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS if문 사용해보기</title>
+</head>
+<body>
+
+  <script>
+    "use strict";
+
+    /** js 부분 */
+    // alert("확인창");
+    // confirm("확인창");
+    // let data = prompt("입력");
+    // console.log(data);
+    // console.log(typeof data);
+
+    /* html 부분*/
+    // document.write(`<h1>${data}</h1>`)
+    // document.write('<h1>' + data + '</h1>')
+
+    // 프롬프트의 사용자가 입력값을 입력했을 때 참이면 "입력값 : 실제입력값", 거짓 : "값을 입력하세요"를 출력
+    // if (data){
+    //   document.write("<p> 입력값: " +  data + "</p>");
+    // }else{
+    //   document.write('값을 입력하세요');
+    // }
+
+    /*사용자로부터 비밀번호 입력받고 입력한 비밀번호가 0070이 맞으면 "로그인 성공", 아니면 "비밀번호가 틀렸습니다." 출력하기. 출력은 p태그로 */
+
+    let pwd = prompt("비밀번호를 작성해주세요");
+
+    let result ;
+
+    if(pwd == "0070"){
+      result = "로그인성공";
+    }else {
+      result = "비밀번호가 틀렸습니다.";
+    }
+
+    document.write(`<p> ${result} </p>`);
+
+  </script>
+</body>
+</html>

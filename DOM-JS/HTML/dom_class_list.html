@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>class list 활용</title>
+
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+
+    main{
+      text-align: right;
+      /*-- 스크롤 생기지 않게 margin 대신 padding으로 바꾸고 border-box설정함-- */
+      padding: 1rem;
+      box-sizing: border-box;
+      /*--------------------------------------------------------------------*/
+      height: 100vh;
+      background-color: #eee;
+    }
+
+    /* 다크모드 class 지정 */
+    main.dark{
+      background-color: #333;
+      color: #fff;
+    }
+
+    a{
+      display: block;
+      text-decoration: none;
+      color: inherit;
+    }
+    ul{
+      list-style: none;
+    }
+
+    nav{
+      width: 200px;
+      height: 100vh;
+      background-color: #ddd;
+      position: fixed;
+      top: 0;
+      left: -200px;
+      transition: 0.5s;
+
+      ul{
+        text-align: center;
+        li{
+          margin: 0.5rem 0 ;
+        }
+      }
+    }
+
+    .menu_btn{
+      position: fixed;
+      top: 0;
+      left: 0;
+      transition: 0.5s;
+      cursor: pointer;
+    }
+
+    .open{
+      .menu_btn{
+        left:200px;
+      }
+
+      nav{
+        left:0;
+      }
+    }
+
+  </style>
+</head>
+
+
+<body>
+  <main>라이트모드</main>
+
+  <button class="menu_btn">메뉴</button>
+  <nav>
+    <ul>
+      <li><a href="#">모드변경</a></li>
+      <li><a href="#">ABOUT</a></li>
+      <li><a href="#">Docs</a></li>
+    </ul>
+  </nav>
+
+
+
+
+  <script>
+    /* 버튼 클릭 시 body에 class를 추가/삭제하기 : toggle */
+
+    //버튼요소 선택하기 
+    const btnElem = document.querySelector('.menu_btn');
+    btnElem.onclick = () => {
+      document.body.classList.toggle("open");
+    }
+
+
+    /*모드변경 클릭 시 다크모드로 변경하기 */
+    //라이트모드 -> 다크모드 
+    //class .dark 추가되도록 설정 
+
+    const modeElem = document.querySelector('li:nth-child(1)');
+    const mainTxt = document.querySelector('main');
+    console.log(mainTxt);
+    
+    modeElem.onclick = () =>{
+      mainTxt.classList.toggle("dark");
+      // mainTxt.textContent = "다크모드";
+
+      if(mainTxt.textContent  === '라이트모드'){
+        mainTxt.textContent = '다크모드';
+      }else{
+        mainTxt.textContent = '라이트모드';
+      }
+      console.dir(mainTxt);
+    }
+  </script>
+</body>
+</html>

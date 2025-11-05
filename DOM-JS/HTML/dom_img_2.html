@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이미지 prev, next</title>
+
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+
+    main{
+      width: 300px;
+      margin: 3rem auto;
+      position : relative;
+
+      img{
+        width: 100%;
+      }
+
+      .btn_wrap{
+        button{
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          &.prev{
+            left:-3rem;
+          }
+          &.next{
+            right: -3rem;
+          }
+        }
+      }
+
+    }
+
+
+  </style>
+</head>
+<body>
+  <main>
+    <img src="../IMG/img-01.png" alt="이미지-1">
+
+    <div class="btn_wrap">
+      <button class="prev">이전</button>
+      <button class="next">다음</button>
+    </div>
+  </main>
+
+  <script src="../JS/dom_img_2.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>사이트 이동시키기 - js 조건문</title>
+</head>
+<body>
+  <script>
+    let site = prompt("네이버, 다음, 구글 중 하나를 입력하세요");
+    let result; 
+
+    switch(site){
+      case "네이버":
+        result ="www.naver.com";
+        break;
+      case "다음":
+        result ="www.daum.com";
+        break;
+      case "구글":
+        result ="www.google.com";
+        break;
+      default :alert("제대로 입력해주세요");
+    }
+
+    if(result){
+      location.href = `https://${result}`;
+    }
+  </script>
+</body>
+</html>

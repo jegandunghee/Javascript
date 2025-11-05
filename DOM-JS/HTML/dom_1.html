@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <!--  head : 브라우저에 정보 제공 -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM구조</title>
+  </head>
+  <body>
+    <h1 id="h1tag">DOM구조</h1>
+    <div>
+      <p class="ptag">Document Object Model</p>
+      <p>브라우저가 html을 객체화하여 트리형태로 만든 형태</p>
+      <img src="" alt="">
+      <input type="text" name="" value="">
+    </div>
+
+    <h2>BOM구조</h2>
+    <div>
+      <p>Browser Object Model</p>
+      <p>배열, 객체, 함수 형태로 변환</p>
+    </div>
+
+    <script>
+      /*DOM 요소 선택 방법*/
+
+      
+
+      //get~ : 가져오기
+      //set~ : 설정하기
+      const elem = document.getElementById("h1tag");
+      const ptag = document.getElementsByClassName("ptag");
+      const tagElem = document.getElementsByTagName("h2");
+
+      console.log(elem);
+      console.log(ptag[0]);
+      console.log(tagElem[0]);
+
+      //queryselector : 자주 사용
+      //queryselectorAll -> [ ]배열로 가져옴 
+      const elem1 = document.querySelectorAll(".ptag");
+      const elem2 = document.querySelector("div > p:nth-child(2)");
+      console.log(elem1);
+      console.log(elem2);
+
+      // p요소의 객체를 가져다 텍스트 변경하기 
+      // elem2.textContent = 'JS에서 .textContent key 선택 후 값 변경하기';
+      elem2.textContent = "js에서 .textContent(key)로 값 변경해보기";
+
+      const elem3 = document.querySelector('div');
+      console.log(elem3);
+      
+      //document : 전체문서 범위 
+      // 선택범위를 줄일 수 있음. -> elem3또한 객체이기때문에 범위로 지정할 수 있음 
+      const elem4 = elem3.querySelector('.ptag');
+      console.log(elem4);
+
+
+
+
+    </script>
+  </body>
+</html>

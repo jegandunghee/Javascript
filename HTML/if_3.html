@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>js- if문 </title>
+</head>
+<body>
+  <script>
+    // 사용자로부터 점수를 입력받고 점수에 따라 성적 등급을 구분하기 
+  
+    // let score = prompt("점수를 입력하세요");
+
+    // if(score >= 90){
+    //   document.write("<h1>A학점</h1>");
+    // }else if(score >=80){
+    //   document.write("<h1>B학점</h1>");
+    // }else if(score >=70){
+    //   document.write("<h1>C학점</h1>");
+    // }else {
+    //   document.write("<h1>F학점</h1>");
+    // }
+
+    // 사용자로부터 apple. banana, orange 중 하나를 입력받고 
+    // 각 과일별로 선택 시 사과선택, 바나나선택, 오렌지 선택을 출력하기 
+    // 출력은 h1태그로 
+
+    let fruit = prompt("apple, banana, orange 중 하나만 고르시죠");
+    let pick ;
+
+    if(fruit === "apple"){
+      pick = "사과 선택!";
+    }else if (fruit === "banana"){
+      pick = "바나나 선택!";
+    }else if (fruit === "orange"){
+      pick = "오렌지 선택!";
+    }else {
+      pick = "사과, 바나나, 오렌지 중에서만 골라주세요"
+    }
+
+    document.write(`<h1> ${pick} </h1>`);
+
+    
+
+
+  </script>
+</body>
+</html>

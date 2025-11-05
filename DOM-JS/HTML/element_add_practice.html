@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>요소 추가 혼자 해보기</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      ul {
+        list-style: none;
+        li {
+          display: flex;
+          gap: 0.5rem;
+          padding: 0.5rem;
+        }
+        button {
+          display: inline-block;
+          justify-content: center;
+          padding: 0.2rem;
+        }
+      }
+
+      main{
+        width: 300px;
+        height: 50vh;
+        background-color: #eee;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>쇼핑몰 장바구니</h1>
+
+    <div class="product">
+      <ul>
+        <li>
+          <p data-price = "10000">상품 A (￦10000)</p>
+          <button>장바구니 추가</button>
+        </li>
+        <li>
+          <p data-price = "15000">상품 B (￦15000)</p>
+          <button>장바구니 추가</button>
+        </li>
+        <li>
+          <p data-price = "40000">상품 C (￦40000)</p>
+          <button>장바구니 추가</button>
+        </li>
+        <li>
+          <p data-price = "20000">상품 D (￦20000)</p>
+          <button>장바구니 추가</button>
+        </li>
+        <li>
+          <p data-price = "35000">상품 E (￦35000)</p>
+          <button>장바구니 추가</button>
+        </li>
+      </ul>
+    </div>
+    <br>
+    <h2>장바구니</h2>
+    <br>
+    <main>
+    </main>
+    <h2>총 가격 : <span class="total">0</span> 원</h2>
+
+
+
+    <script src="../JS/element_add_practice.js"></script>
+  </body>
+</html>

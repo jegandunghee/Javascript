@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이벤트 흐름</title>
+  <style>
+
+    div#outer{
+      background-color: tomato;
+      padding: 1rem;
+      #middle{
+        background-color: #ddd;
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="outer">
+    <div id="middle">
+      <button id="inner">클릭</button>
+    </div>
+  </div>
+
+  <script src="../JS/event_flow.js"></script>
+</body>
+</html>

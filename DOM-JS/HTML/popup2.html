@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>클릭 시 팝업창 만들기 -2</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+
+    main{
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img{
+        width: 300px;
+        transition: 0.3s;
+        cursor: pointer;
+        &:hover{
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    .lightbox{
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+
+      .content{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 50px 30px;
+        border-radius: 1rem;
+
+        .close{
+          position: absolute;
+          top: 0;
+          right: 0;
+          font-size: 2rem;
+          width: 50px;
+          height: 50px;
+          background:none;
+          border-radius: 1rem;
+          border:none;
+          cursor: pointer;
+
+          &:hover{
+            background-color: #eee;
+          }
+
+        }
+      }
+    }
+  </style>
+
+  <script src="../JS/popup2-2.js" defer></script>
+</head>
+
+<body>
+  <main>
+    <img src="../IMG/img-01.png" alt="이것은 이미지 1의 설명입니다. 클릭하면 크게 보입니다.">
+
+    <img src="../IMG/img-02.png" alt="이것은 이미지 2의 설명입니다. 클릭하면 크게 보입니다.">
+
+    <img src="../IMG/img-03.png" alt="이것은 이미지 3의 설명입니다. 클릭하면 크게 보입니다.">
+  </main>
+
+  <!-- 팝업 영역 -->
+
+  <div class="lightbox">
+    <div class="content">
+      <button class="close">X</button>
+      <!-- <img src="../IMG/img-01.png" alt="크게 보여지는 이미지">
+      <p>이미지 alt 값이 보여집니다.</p> -->
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+@charset 'utf-8';
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+ul{
+  list-style: none;
+}
+body{
+  height: 100vh;
+  /* main 중앙정렬하기 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* -------------------------- */
+
+main{
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+
+  position: relative;
+}
+ul.slider{
+  width: 1500px;
+  height: 300px;
+  display: flex;
+  /* absolute : height값이 사라짐 -> 꼭 지정해두기 */
+  position: absolute; 
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+
+  li{
+    width: 100%;
+
+    img{
+      width: 100%;
+    }
+  }
+}
+
+.btn_wrap{
+  /* button태그의 display 방식이 inline이라 text-align : center로 설정함 */
+  text-align: center;
+  button{
+    font-size: 2rem;
+    margin: auto 1rem;
+    padding: 0.5rem 1rem;
+  }
+  
+}

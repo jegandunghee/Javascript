@@ -53,6 +53,8 @@ ul.slider{
     font-size: 2rem;
     margin: auto 1rem;
     padding: 0.5rem 1rem;
+    /* 클릭-이벤트 무효화 하기  */
+    pointer-events: auto;
   }
   
 }

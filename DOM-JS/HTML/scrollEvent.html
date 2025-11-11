@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>스크롤 이벤트 알아보기</title>
+
+  <style>
+    *{margin: 0; padding: 0;}
+
+    main{
+      height: 300vh;
+      background: #ddd;
+    }
+
+    h1{
+      background: tomato;
+    }
+
+    /* h1에 추가/삭제 될 클래스 처리하기 */
+    h1.fixed{
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+
+    .proBar{
+      height: 8px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: #7977dd;
+    }
+
+    .top{
+      position: fixed;
+      right: 1rem ;
+      bottom: 1rem;
+      width: 50px;
+      height: 50px;
+      border-radius: 30%;
+      box-shadow: 0 0 5px #555;
+      color: #fff;
+      font-weight: bolder;
+      background-color: #80af88;
+      text-align: center;
+      line-height: 48px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <!-- 스크롤의 진행률을 알려주는 div -->
+    <div class="proBar"></div>
+    <h1>스크롤 이벤트</h1>
+  </main>
+
+  <div class="top">TOP</div>
+
+  
+
+  <script src="../JS/scrollEvent.js"></script>
+</body>
+</html>

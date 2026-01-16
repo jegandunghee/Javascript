@@ -42,7 +42,7 @@ const handlePrevClick = () => {
   count--; 
 
   // slider의 위치값 변경 : left :  100%
-  slidElem.style.transition = '0.5s';
+  slidElem.style.transition = '2s';
   slidElem.style.left= `-${count*100}%`;
 }
 
@@ -55,7 +55,7 @@ stopBtn.addEventListener('click',() =>{
 //자동실행하기
 playBtn.addEventListener('click', () => {
   //handleNextClick을 2초에 한번씩 무한실행하기
-  timer = setInterval( handleNextClick, 2000);
+  timer = setInterval( handleNextClick, 4000);
 }) ;
 
 //next 버튼 처리될 때 실행될 함수 만들기 
@@ -67,7 +67,7 @@ const handleNextClick = () => {
 
   count++;
   // slider의 위치값 변경 : left :  -100%
-  slidElem.style.transition = '0.5s';
+  slidElem.style.transition = '3s';
   slidElem.style.left= `-${count*100}%`;
 }
 

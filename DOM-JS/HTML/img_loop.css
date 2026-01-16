@@ -46,15 +46,33 @@ ul.slider{
   }
 }
 
+button{
+  color: rgb(94, 79, 77);
+}
+
 .btn_wrap{
-  /* button태그의 display 방식이 inline이라 text-align : center로 설정함 */
-  text-align: center;
   button{
+    display: inline-block;
     font-size: 2rem;
+    font-weight: 600;
     margin: auto 1rem;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 2.1rem;
+    border-radius: 2rem;
+    border: none;
+    outline: none;
     /* 클릭-이벤트 무효화 하기  */
     pointer-events: auto;
   }
-  
+}
+
+.palyer{
+  *{
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: auto 1rem;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    border: none;
+    outline: none;
+  }
 }
